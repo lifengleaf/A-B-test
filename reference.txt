@@ -1,0 +1,4 @@
+1. https://en.wikipedia.org/wiki/Bonferroni_correction
+2. http://www.evanmiller.org/ab-testing/sample-size.html
+3. https://discussions.udacity.com/t/final-project-calculating-standard-deviations/27356
+4. http://www.r-tutor.com/elementary-statistics/non-parametric-methods/sign-test
