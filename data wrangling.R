@@ -27,7 +27,7 @@ diff$Ratio_Clicks<- experiment$Clicks / (experiment$Clicks + control$Clicks)
 
 ################# Sanity Check ################# 
 n1<- sum(control$Pageviews + experiment$Pageviews)
-se<- sqrt(0.5*(1-0.5)/n)
+se<- sqrt(0.5*(1-0.5)/n1)
 m<- 1.96*se
 lower<- 0.5-m
 upper<- 0.5+m
@@ -36,7 +36,7 @@ upper<- 0.5+m
 mean(diff$Ratio_Pageviews)
 
 n2<- sum(control$Clicks + experiment$Clicks)
-se<- sqrt(0.5*(1-0.5)/n)
+se<- sqrt(0.5*(1-0.5)/n2)
 m<-1.96*se
 lower<- 0.5-m
 upper<- 0.5+m
@@ -67,7 +67,7 @@ var_exp<- gc_exp*(1-gc_exp)/sum(experiment[1:23,]$Clicks)
 var_control<- gc_control*(1-gc_control)/sum(control[1:23,]$Clicks)
 var_diff<- var_exp+var_control
 
-# 95% confidence level
+# 95% confidence interval
 m<- 1.96*sqrt(var_diff)
 lower<- gc_diff-m
 upper<- gc_diff+m
@@ -83,7 +83,7 @@ var_exp<- nc_exp*(1-nc_exp)/sum(experiment[1:23,]$Clicks)
 var_control<- nc_control*(1-nc_control)/sum(control[1:23,]$Clicks)
 var_diff<- var_exp+var_control
 
-# 95% confidence level
+# 95% confidence interval
 m<- 1.96*sqrt(var_diff)
 lower<- nc_diff-m
 upper<- nc_diff+m
